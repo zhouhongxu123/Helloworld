@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.hongxu.helloworld">
+
+    <!-- <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission> -->
+    <!-- ！&#45;&#45; 只有一个application&#45;&#45; -->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/header"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- ！&#45;&#45; App启动的第一个界面&#45;&#45; -->
+        <!-- !&#45;&#45;强制竖屏&#45;&#45; -->
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- !&#45;&#45;这里可以更改SecActivity的类型 比如可以改成一个Dialog的形式 这时候Activity的生命周期会改变 第一个程序运行onpause&ndash;&gt;onresume&#45;&#45; -->
+        <activity android:name=".SecActivity">
+            <intent-filter>
+                <action android:name="com.test.SecActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Text" />
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity android:name=".UI_TextActivity"></activity>
+    </application>
+
+</manifest>
